@@ -107,16 +107,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Form submission
     const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Here you would typically send the form data to a server
-            // For this example, we'll just show an alert
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-    }
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        // Optional: Add loading state
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // FormSubmit will handle the actual submission
+        // You can keep this or let the form submit normally
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 3000);
+    });
+}
 
     // Animate skill bars when skills tab is shown
     const skillsTabBtn = document.querySelector('[data-tab="skills"]');
@@ -211,6 +217,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Start typing on load
     window.onload = typeText;
+
+
+
+
+
+
+  // Wait for everything to load
+window.addEventListener('load', function() {
+    // Additional check for WebFonts if you're using them
+    if (document.fonts) {
+      document.fonts.ready.then(function() {
+        hideLoader();
+      });
+    } else {
+      hideLoader();
+    }
+    
+    function hideLoader() {
+      // Minimum display time (1.5 seconds)
+      setTimeout(function() {
+        const loader = document.getElementById('loader');
+        loader.classList.add('hidden');
+        
+        // Remove from DOM after animation completes
+        setTimeout(() => {
+          loader.remove();
+        }, 500);
+      }, 1500);
+    }
+  });
 
 
 
