@@ -106,39 +106,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Form submission
-    // Initialize EmailJS with your User ID
-(function() {
-    emailjs.init("7tsC6V84Q_XKaGfy4"); // Replace with your EmailJS public key
-})();
-
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        
-        // Show loading state
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-        // Send the email
-        emailjs.sendForm('service_hdq1zc9', 'template_ajroy5q', this)
-            .then(() => {
-                alert('Thank you! Your message has been sent successfully.');
-                contactForm.reset();
-            })
-            .catch((error) => {
-                alert('Oops! Something went wrong. Please try again later.');
-                console.error('Error:', error);
-            })
-            .finally(() => {
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Optional: Add loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // FormSubmit will handle the actual submission
+            // You can keep this or let the form submit normally
+            setTimeout(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            });
-    });
-}
+            }, 3000);
+        });
+    }
 
     // Animate skill bars when skills tab is shown
     const skillsTabBtn = document.querySelector('[data-tab="skills"]');
