@@ -819,12 +819,121 @@ img {
     }
 }
 
+@media (max-width: 768px) {
+    /* Right-aligned mobile menu button */
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        z-index: 1001; /* Above other elements */
+    }
 
+    /* Mobile menu panel (slides in from left) */
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--white-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        z-index: 1000; /* Below toggle but above content */
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    /* Hamburger icon animation */
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Center nav items when menu is open */
+    .nav-center {
+        justify-content: center;
+    }
+    
+    /* Other mobile styles */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .skills-categories {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjust toggle position for very small screens */
+    .nav-toggle {
+        right: 15px;
+        top: 20px;
+    }
+
+    /* Typography adjustments */
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .hero-content h2 {
+        font-size: 20px;
+    }
+    
+    .section-header h2 {
+        font-size: 30px;
+    }
+    
+    /* Layout adjustments */
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-btn {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+    
+    .tab-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .education-item {
+        padding-left: 60px;
+    }
+    
+    .education-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
 
 
 
 /* Loading Animation Styles */
-.loader-container {
+/* .loader-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -871,26 +980,26 @@ img {
       transform: scale(0.8);
       opacity: 0.5;
     }
-  }
+  } */
   
   /* When loading is complete */
-  .loader-container.hidden {
+  /* .loader-container.hidden {
     opacity: 0;
     visibility: hidden;
-  }
+  } */
   
   /* Responsive adjustments */
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .loader {
       font-size: 20vh;
     }
-  }
+  } */
   
-  @media (max-width: 576px) {
+  /* @media (max-width: 576px) {
     .loader {
       font-size: 15vh;
     }
-  }
+  } */
 
 
 

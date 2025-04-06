@@ -224,29 +224,29 @@ if (contactForm) {
 
 
   // Wait for everything to load
-window.addEventListener('load', function() {
-    // Additional check for WebFonts if you're using them
-    if (document.fonts) {
-      document.fonts.ready.then(function() {
-        hideLoader();
-      });
-    } else {
-      hideLoader();
-    }
+// window.addEventListener('load', function() {
+//     // Additional check for WebFonts if you're using them
+//     if (document.fonts) {
+//       document.fonts.ready.then(function() {
+//         hideLoader();
+//       });
+//     } else {
+//       hideLoader();
+//     }
     
-    function hideLoader() {
-      // Minimum display time (1.5 seconds)
-      setTimeout(function() {
-        const loader = document.getElementById('loader');
-        loader.classList.add('hidden');
+//     function hideLoader() {
+//       // Minimum display time (1.5 seconds)
+//       setTimeout(function() {
+//         const loader = document.getElementById('loader');
+//         loader.classList.add('hidden');
         
-        // Remove from DOM after animation completes
-        setTimeout(() => {
-          loader.remove();
-        }, 500);
-      }, 1500);
-    }
-  });
+//         // Remove from DOM after animation completes
+//         setTimeout(() => {
+//           loader.remove();
+//         }, 500);
+//       }, 1500);
+//     }
+//   });
 
 
 
