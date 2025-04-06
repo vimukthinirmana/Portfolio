@@ -106,17 +106,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Form submission
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+    // Initialize EmailJS with your User ID
+(function() {
+    emailjs.init("7tsC6V84Q_XKaGfy4"); // Replace with your EmailJS public key
+})();
 
-            // Here you would typically send the form data to a server
-            // For this example, we'll just show an alert
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-    }
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        // Show loading state
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Send the email
+        emailjs.sendForm('service_hdq1zc9', 'template_ajroy5q', this)
+            .then(() => {
+                alert('Thank you! Your message has been sent successfully.');
+                contactForm.reset();
+            })
+            .catch((error) => {
+                alert('Oops! Something went wrong. Please try again later.');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+    });
+}
 
     // Animate skill bars when skills tab is shown
     const skillsTabBtn = document.querySelector('[data-tab="skills"]');
@@ -179,6 +201,38 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500);
     });
 
+
+// typing Animation
+const element = document.getElementById('typed-text');
+  const texts = ['UI/UX Designer','Front-End Developer'];
+  let textIndex = 0;
+  let charIndex = 0;
+
+  function typeText() {
+    if (charIndex < texts[textIndex].length) {
+      element.textContent += texts[textIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeText, 100); // Typing speed
+    } else {
+      setTimeout(() => {
+        eraseText();
+      }, 1000); // Pause after fully typed
+    }
+  }
+
+  function eraseText() {
+    if (charIndex > 0) {
+      element.textContent = texts[textIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(eraseText, 50); // Erase speed
+    } else {
+      textIndex = (textIndex + 1) % texts.length;
+      setTimeout(typeText, 500); // Pause before typing next
+    }
+  }
+
+  // Start typing on load
+  window.onload = typeText;
   
 
 
