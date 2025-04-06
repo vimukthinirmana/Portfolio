@@ -130,4 +130,54 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 100);
         });
     }
+
+// CV Download functionality
+document.getElementById('downloadCvBtn').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    
+    // Create a temporary anchor element
+    const link = document.createElement('a');
+    link.href = this.getAttribute('href');
+    link.download = 'Vimukthi Nirmana CV Resume.pdf'; 
+    
+    // Append to the document, trigger click, then remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Optional: Track download event (for analytics)
+    console.log('CV download initiated');
+});
+
+// CV Download functionality with visual feedback
+document.getElementById('downloadCvBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const btn = this;
+    const originalText = btn.textContent;
+    
+    // Change button text temporarily
+    btn.textContent = 'Preparing download...';
+    btn.disabled = true;
+    
+    // Create download link
+    const link = document.createElement('a');
+    link.href = this.getAttribute('href');
+    link.download = 'Vimukthi Nirmana CV Resume.pdf';
+    
+    // Simulate delay for better UX (optional)
+    setTimeout(() => {
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // Reset button after download
+        btn.textContent = originalText;
+        btn.disabled = false;
+        
+        console.log('CV downloaded successfully');
+    }, 500);
+});
+
+
 });
