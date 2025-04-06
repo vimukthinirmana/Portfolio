@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vimukthi Nirmana Sanketh | Front-End Developer & UI/UX Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">&lt<span>/&gt</span></a>
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Hi, I'm <span>Vimukthi Nirmana Sanketh</span></h1>
+                <h2>Front-End Developer & UI/UX Designer</h2>
+                <p>I create beautiful, functional, and user-centered digital experiences</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="assts/Group2.png" alt="Vimukthi Nirmana Sanketh" class="profile-img">
+                
+                <!-- Vertical Social Media Icons -->
+                <div class="vertical-social">
+                    <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" title="Behance"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="social-icon" title="Gmail"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About <span>Me</span></h2>
+                <p>Get to know me better</p>
+            </div>
+            
+            <div class="about-tabs" data-aos="fade-up">
+                <button class="tab-btn active" data-tab="about-me">About Me</button>
+                <button class="tab-btn" data-tab="education">Education</button>
+                <button class="tab-btn" data-tab="skills">Skills</button>
+            </div>
+            
+            <div class="tab-content active" id="about-me">
+                <div class="about-content">
+                    <div class="about-image" data-aos="fade-right">
+                        <img src="assts/MyProfileImgPng.png" alt="About Me">
+                    </div>
+                    <div class="about-text" data-aos="fade-left">
+                        <h3>Who am I?</h3>
+                        <p>’m Vimukthi Nirmana Sanketh — a UI/UX designer and front-end
+                            developer who loves turning ideas into visually engaging, user-friendly
+                            digital experiences. Currently studying at IJSE, I enjoy blending creativity
+                            with purpose to craft designs that not only look good but feel right. I'm
+                            always exploring new trends and pushing pixels to create smooth,
+                            meaningful interactions that leave a lasting impression.
+                            </p>
+                        
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <h4>Name:</h4>
+                                <p>Vimukthi Nirmana Sanketh</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4>Age:</h4>
+                                <p>23</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4>Experience:</h4>
+                                <p>Intern</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4>From:</h4>
+                                <p>Galle, Sri Lanka</p>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="btn btn-primary">Download CV</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="education">
+                <div class="education-content">
+                    <!-- <div class="education-item" data-aos="fade-up">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>University of XYZ</h3>
+                            <p class="degree">Bachelor of Science in Computer Science</p>
+                            <p class="date">2020 - 2024</p>
+                            <p class="description">Specialized in Web Development and User Interface Design. Completed coursework in advanced JavaScript frameworks and human-computer interaction.</p>
+                        </div>
+                    </div> -->
+                    
+                    <div class="education-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>Institute of Software Engineering (IJSE)</h3>
+                            <p class="degree">Full Stack Web Development</p>
+                            <p class="date">2022 - 2025</p>
+                            <p class="description">Offer BSc(hons) Computer Science and software engineering degrees. 
+                                Produce IT professional to the IT industry as a leading institute for IT</p>
+                        </div>
+                    </div>
+                    
+                    <div class="education-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>Kathaluwa Central Collage</h3>
+                            <p class="degree">Advanced Level - Technology Stream</p>
+                            <p class="date">2018 - 2020</p>
+                            <p class="description">Completed Advanced Level examinations with a focus on Technology Stream.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="skills">
+                <div class="skills-content">
+                    <div class="skills-categories">
+                        <div class="skills-category" data-aos="fade-up">
+                            <h3><i class="fas fa-code"></i> Front-End Development</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <span class="skill-name">HTML5</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 65%;"></div>
+                                    </div>
+                                    <span class="skill-percent">65%</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">CSS</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 60%;"></div>
+                                    </div>
+                                    <span class="skill-percent">60%</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">JavaScript</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 45%;"></div>
+                                    </div>
+                                    <span class="skill-percent">45%</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">React</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 30%;"></div>
+                                    </div>
+                                    <span class="skill-percent">30%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                            <h3><i class="fas fa-paint-brush"></i> UI/UX Design</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <span class="skill-name">Figma</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%;"></div>
+                                    </div>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Photoshop</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 50%;"></div>
+                                    </div>
+                                    <span class="skill-percent">50%</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Adobe Illustrator</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 30%;"></div>
+                                    </div>
+                                    <span class="skill-percent">30%</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Wireframing</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 40%;"></div>
+                                    </div>
+                                    <span class="skill-percent">40%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                            <h3><i class="fas fa-tools"></i> Other Skills</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <span class="skill-name">Git</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 45%;"></div>
+                                    </div>
+                                    <span class="skill-percent">45%</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Responsive Design</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 50%;"></div>
+                                    </div>
+                                    <span class="skill-percent">50%</span>
+                                </div>
+                                <!-- <div class="skill-item">
+                                    <span class="skill-name">SEO</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 75%;"></div>
+                                    </div>
+                                    <span class="skill-percent">75%</span>
+                                </div> -->
+                                <!-- <div class="skill-item">
+                                    <span class="skill-name">Problem Solving</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%;"></div>
+                                    </div>
+                                    <span class="skill-percent">90%</span>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>My <span>Services</span></h2>
+                <p>What I offer to my clients</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom website development with clean, efficient code that follows best practices and modern standards.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design approach creating intuitive interfaces that enhance user experience and engagement.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Fully responsive designs that work seamlessly across all devices from desktop to mobile.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Optimized websites for better search engine visibility and higher rankings.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Performance</h3>
+                    <p>High-performance websites with fast load times and smooth interactions.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Support</h3>
+                    <p>Ongoing support and maintenance to keep your website running smoothly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>My <span>Projects</span></h2>
+                <p>Some of my recent work</p>
+            </div>
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="design">UI/UX Design</button>
+                <button class="filter-btn" data-filter="app">Web Apps</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-category="web">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 1">
+                    <div class="project-overlay">
+                        <h3>E-commerce Website</h3>
+                        <p>Web Development</p>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-category="design">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 2">
+                    <div class="project-overlay">
+                        <h3>Mobile App Design</h3>
+                        <p>UI/UX Design</p>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-category="app">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 3">
+                    <div class="project-overlay">
+                        <h3>Task Management App</h3>
+                        <p>Web Application</p>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-category="web">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 4">
+                    <div class="project-overlay">
+                        <h3>Corporate Website</h3>
+                        <p>Web Development</p>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-category="design">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 5">
+                    <div class="project-overlay">
+                        <h3>Dashboard UI</h3>
+                        <p>UI/UX Design</p>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-category="app">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 6">
+                    <div class="project-overlay">
+                        <h3>Weather App</h3>
+                        <p>Web Application</p>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact <span>Me</span></h2>
+                <p>Let's work together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>vimukthinirmana64@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+94-76867867</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Galle, Sri Lanka</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Vimukthi Nirmana Sanketh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
