@@ -108,19 +108,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Form submission
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            // Optional: Add loading state
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // FormSubmit will handle the actual submission
-            // You can keep this or let the form submit normally
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 3000);
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
         });
     }
 
@@ -156,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // CV Download functionality with visual feedback
-    document.getElementById('downloadCvBtn').addEventListener('click', function(e) {
+    document.getElementById('downloadCvBtn').addEventListener('click', function (e) {
         e.preventDefault();
 
         const btn = this;
@@ -186,38 +180,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-// typing Animation
-const element = document.getElementById('typed-text');
-  const texts = ['UI/UX Designer','Front-End Developer'];
-  let textIndex = 0;
-  let charIndex = 0;
+    // typing Animation
+    const element = document.getElementById('typed-text');
+    const texts = ['UI/UX Designer', 'Front-End Developer'];
+    let textIndex = 0;
+    let charIndex = 0;
 
-  function typeText() {
-    if (charIndex < texts[textIndex].length) {
-      element.textContent += texts[textIndex].charAt(charIndex);
-      charIndex++;
-      setTimeout(typeText, 100); // Typing speed
-    } else {
-      setTimeout(() => {
-        eraseText();
-      }, 1000); // Pause after fully typed
+    function typeText() {
+        if (charIndex < texts[textIndex].length) {
+            element.textContent += texts[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, 100); // Typing speed
+        } else {
+            setTimeout(() => {
+                eraseText();
+            }, 1000); // Pause after fully typed
+        }
     }
-  }
 
-  function eraseText() {
-    if (charIndex > 0) {
-      element.textContent = texts[textIndex].substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(eraseText, 50); // Erase speed
-    } else {
-      textIndex = (textIndex + 1) % texts.length;
-      setTimeout(typeText, 500); // Pause before typing next
+    function eraseText() {
+        if (charIndex > 0) {
+            element.textContent = texts[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(eraseText, 50); // Erase speed
+        } else {
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(typeText, 500); // Pause before typing next
+        }
     }
-  }
 
-  // Start typing on load
-  window.onload = typeText;
-  
+    // Start typing on load
+    window.onload = typeText;
+
 
 
 });
