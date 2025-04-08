@@ -224,7 +224,7 @@ if (contactForm) {
 
 
   // Wait for everything to load
-// window.addEventListener('load', function() {
+//     window.addEventListener('load', function() {
 //     // Additional check for WebFonts if you're using them
 //     if (document.fonts) {
 //       document.fonts.ready.then(function() {

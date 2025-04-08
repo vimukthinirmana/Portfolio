@@ -232,7 +232,7 @@ img {
 
 .hero-content h2 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 20px;
     color: var(--gray-color);
 }
@@ -980,7 +980,7 @@ img {
       transform: scale(0.8);
       opacity: 0.5;
     }
-  } */
+  } 
   
   /* When loading is complete */
   /* .loader-container.hidden {
@@ -989,17 +989,17 @@ img {
   } */
   
   /* Responsive adjustments */
-  /* @media (max-width: 768px) {
+   /* @media (max-width: 768px) {
     .loader {
       font-size: 20vh;
     }
-  } */
+  }  */
   
-  /* @media (max-width: 576px) {
+   /* @media (max-width: 576px) {
     .loader {
       font-size: 15vh;
     }
-  } */
+  } */ 
 
 
 
